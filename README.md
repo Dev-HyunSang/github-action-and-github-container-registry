@@ -1,15 +1,23 @@
 # GitHub Action & GitHub Container Registry
 GitHub Action과 GitHub Container Registry를 사용하여서 Pipeline를 구축하는 프로젝트입니다.
 
+- **GitHub Registry:** [`Dev-HyunSang/github-action-and-github-container-registry`](https://github.com/Dev-HyunSang/github-action-and-github-container-registry)
+- **Package:** [`Dev-HyunSang/github-action-and-github-container-registry`](https://github.com/Dev-HyunSang/github-action-and-github-container-registry/pkgs/container/github-action-and-github-container-registry)
+
+
+## How to Docker Image Pull?
+```shell
+$ docker pull ghcr.io/dev-hyunsang/github-action-and-github-container-registry:latest`
+```
+
 ## Stack
-- `Golang`
-- `Docker`
+- [`golang`](https://go.dev/)
+    - [`gofiber/fiber`](https://gofiber.io/)
+- [`Docker`](https://www.docker.com/)
+- [`GitHub Action`](https://github.com/features/actions)
+- [`GitHub Container Registry`](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
 
-## Docs
-- [GitHub Action](https://github.com/features/actions)
-- [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
-
-## How to GitHub Container Registry?
+## How to work at GitHub Container Registry?
 ```shell
 $ docker build --tag qkrgustkd15/github-action-and-github-container-registry:latest .
 # or 
