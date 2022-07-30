@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: 1.18
+      - name: Set env
+        run: echo "RELEASE_VERSION=latest" >> $GITHUB_ENV
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to GitHub Container Registry
@@ -32,4 +34,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/github-action-and-github-container-registry:latest
+            ghcr.io/${{ github.repository_owner }}/github-action-and-github-container-registry:${{ env.RELEASE_VERSION }}
